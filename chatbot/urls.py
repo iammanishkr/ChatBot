@@ -1,24 +1,12 @@
-"""
-URL configuration for chatbot project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
 from django.urls import path
-from chat.views import chatbot_view
+from django.contrib import admin
+from chat.views import chatbot_view, process_message, get_chat_messages, create_new_chat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', chatbot_view, name='chatbot'),
+    path('', chatbot_view, name='chatbot_view'),  # Optional if this is your homepage
+    path('chat/<int:chat_id>/', chatbot_view, name='chatbot_view_with_id'),  # Add this line to accept chat_id
+    path('process_message/', process_message, name='process_message'),
+    path('get_chat_messages/<int:chat_id>/', get_chat_messages, name='get_chat_messages'),
+    path('create_new_chat/', create_new_chat, name='create_new_chat'),
 ]

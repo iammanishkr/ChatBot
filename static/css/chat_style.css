@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f3f6;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container-fluid {
+  display: flex;
+  height: 100vh; /* Full height */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  background-color: #2e3a4e; /* Dark background for sidebar */
+  color: white; /* Text color for sidebar */
+  padding: 20px; /* Padding for sidebar content */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow for sidebar */
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #d1d8e0; /* Lighter color on hover */
+}
+
+.new-chat-btn {
+  background-color: #1c8d73; /* Button color */
+  color: white; /* Button text color */
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: 500; /* Bold text */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.new-chat-btn:hover {
+  background-color: #16a085; /* Darker button color on hover */
+}
+
+.chat-history {
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+  margin-bottom: 20px; /* Space below chat history */
+  overflow-y: auto; /* Scroll if content exceeds height */
+  max-height: 60vh; /* Limit height of chat history */
+}
+
+.chat-history li {
+  padding: 10px;
+  border-bottom: 1px solid #3e4d64; /* Divider for list items */
+}
+
+.chat-history li:last-child {
+  border-bottom: none; /* Remove bottom border for last item */
+}
+
+.chat-history a {
+  display: block; /* Block-level link */
+  padding: 12px; /* Padding for links */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #3e4d64; /* Background color */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.chat-history a:hover {
+  background-color: #57657f; /* Change background on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1; /* Fill remaining space */
+  padding: 20px; /* Padding for main content */
+  background-color: #ffffff; /* White background */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items evenly */
+  border-left: 1px solid #dee2e6; /* Left border for separation */
+}
+
+.chat-box {
+  border: 1px solid #dee2e6; /* Border around chat box */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside chat box */
+  height: 70%; /* Height of chat box */
+  overflow-y: auto; /* Scroll if content exceeds height */
+  background: linear-gradient(135deg, #fdfbfb, #ebedee); /* Background gradient */
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+.message {
+  margin: 10px 0; /* Space between messages */
+  padding: 15px; /* Padding for messages */
+  border-radius: 10px; /* Rounded corners */
+  width: fit-content; /* Width based on content */
+  max-width: 75%; /* Max width for messages */
+  font-size: 15px; /* Font size for messages */
+}
+
+.user-message {
+  background-color: #daf6db; /* Light green for user messages */
+  text-align: right; /* Align user messages to the right */
+  margin-left: auto; /* Push user messages to the right */
+  color: #1d6734; /* Dark green text */
+  border-left: 4px solid #1c8d73; /* Left border for user messages */
+}
+
+.bot-message {
+  background-color: #f9d5d8; /* Light red for bot messages */
+  text-align: left; /* Align bot messages to the left */
+  color: #a13641; /* Dark red text */
+  border-right: 4px solid #e74c3c; /* Right border for bot messages */
+}
+
+.timestamp {
+  font-size: 12px; /* Smaller font size for timestamp */
+  color: #888; /* Gray color for timestamp */
+  margin-top: 8px; /* Space above timestamp */
+  display: block; /* Block display for timestamp */
+}
+
+/* Message Form */
+.message-form {
+  display: flex; /* Flex layout for message form */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center vertically */
+  padding: 20px; /* Padding around message form */
+  border-top: 1px solid #dee2e6; /* Top border for separation */
+}
+
+.send-btn {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 12px 20px; /* Padding for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.send-btn:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.no-messages {
+  color: #999; /* Gray color for no messages text */
+  text-align: center; /* Center alignment */
+  margin-top: 20px; /* Space above text */
+}
