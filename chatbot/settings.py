@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w+jg^e*8&s#&jiohy5+nh0b4_@1$@b-x2b&kf1x!2b6pkz%k=e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chat-bot-seven-alpha.vercel.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
